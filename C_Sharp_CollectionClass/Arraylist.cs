@@ -84,6 +84,26 @@ namespace C_Sharp_CollectionClass
                 Console.WriteLine(i+" ");
             }
         }
+
+        public static void removeElement()
+        {
+            ArrayList list = new ArrayList()
+            {
+                10, "gislen", 'c', true, 9.43, 100,4.0, false, "id", "error"
+            };
+
+            list.Remove(10);
+            list.RemoveAt(2);
+            list.RemoveRange(2, 4);
+
+            foreach(var i in list)
+            {
+                Console.WriteLine(i+", ");
+            }
+
+            Console.WriteLine("Length of the ArrayList: "+ list.Count);
+        }
+
         static void Main(string[] args)
         {
             //arrayBasic();
@@ -91,7 +111,8 @@ namespace C_Sharp_CollectionClass
             //accessArrayElement();
 
             //--------------------------Methods ---------------------------------
-            InsertElement();
+            //InsertElement();
+            removeElement();
 
 
         }
