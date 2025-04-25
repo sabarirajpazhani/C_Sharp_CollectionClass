@@ -121,7 +121,7 @@ namespace C_Sharp_CollectionClass
             //--------------------------Methods ---------------------------------
             //InsertElement();
             //removeElement();
-            containsMethod();
+            //containsMethod();
 
         }
 
