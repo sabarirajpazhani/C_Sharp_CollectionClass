@@ -103,7 +103,15 @@ namespace C_Sharp_CollectionClass
 
             Console.WriteLine("Length of the ArrayList: "+ list.Count);
         }
+        public static void containsMethod()
+        {
+            ArrayList list = new ArrayList()
+            {
+                10, "gislen", 'c', true, 9.43, 100,4.0, false, "id", "error"
+            };
 
+            Console.WriteLine(list.Contains("gislen"));
+        }
         static void Main(string[] args)
         {
             //arrayBasic();
@@ -112,8 +120,8 @@ namespace C_Sharp_CollectionClass
 
             //--------------------------Methods ---------------------------------
             //InsertElement();
-            removeElement();
-
+            //removeElement();
+            containsMethod();
 
         }
 
