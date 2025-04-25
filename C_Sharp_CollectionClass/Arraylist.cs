@@ -32,13 +32,66 @@ namespace C_Sharp_CollectionClass
             {
                 Console.Write(i+" ");
             }
+        }
 
-            
+        public static void accessArrayElement()
+        {
+            ArrayList list = new ArrayList();
+            for(int i =0; i< 4; i++)
+            {
+                Console.Write("Enter the ArrayList Element: ");
+                string str = Console.ReadLine();
+                list.Add(str);
+            }
+
+            Console.WriteLine("Acessing the Array Elements: ");
+            for(int i=0; i<4; i++)
+            {
+                Console.WriteLine((object)list[i]);
+            }
+
+            var list2 = new ArrayList()
+            {
+                1, true, "Gislen", 2.23
+            };
+
+            for(int i=0; i<4; i++)
+            {
+                Console.WriteLine(list2[i]);
+            }
+
+        }
+
+        public static void InsertElement()
+        {
+            ArrayList list = new ArrayList()
+            {
+                10, "gislen", 'c', true, 9.43
+            };
+
+            list.Insert(0, "CSE"); //insert at first positiom
+            list.Insert(3, 's'); //insert at 4th position
+
+            list.InsertRange(2, new[] { 1, 2, 3, 4 });
+            ArrayList arr = new ArrayList()
+            {
+                "gislen", 12, 100
+            };
+            list.InsertRange(1, arr);
+
+            foreach(var i in list)
+            {
+                Console.WriteLine(i+" ");
+            }
         }
         static void Main(string[] args)
         {
-            arrayBasic();
-            objectInitializer();
+            //arrayBasic();
+            //objectInitializer();
+            //accessArrayElement();
+
+            //--------------------------Methods ---------------------------------
+            InsertElement();
 
 
         }
