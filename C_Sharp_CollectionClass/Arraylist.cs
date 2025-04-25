@@ -20,9 +20,27 @@ namespace C_Sharp_CollectionClass
             }
 
         }
+
+        public static void objectInitializer()
+        {
+            var arrayList = new ArrayList()
+            {
+                102, "Gislem", 'c', true, 3.4
+            };
+
+            foreach(var i in arrayList)
+            {
+                Console.Write(i+" ");
+            }
+
+            
+        }
         static void Main(string[] args)
         {
             arrayBasic();
+            objectInitializer();
+
+
         }
 
     }
