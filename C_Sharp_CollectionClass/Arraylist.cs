@@ -112,6 +112,21 @@ namespace C_Sharp_CollectionClass
 
             Console.WriteLine(list.Contains("gislen"));
         }
+
+        public static void cloneArray()
+        {
+            ArrayList list = new ArrayList()
+            {
+                10, "gislen", 'c', true, 9.43
+            };
+
+            ArrayList list2 = (ArrayList)list.Clone();
+
+            foreach(var i in list2)
+            {
+                Console.WriteLine(i+" ");
+            }
+        }
         static void Main(string[] args)
         {
             //arrayBasic();
@@ -122,6 +137,7 @@ namespace C_Sharp_CollectionClass
             //InsertElement();
             //removeElement();
             //containsMethod();
+            cloneArray();
 
         }
 
