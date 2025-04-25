@@ -127,17 +127,31 @@ namespace C_Sharp_CollectionClass
                 Console.WriteLine(i+" ");
             }
         }
+
+        public static void sortElements()
+        {
+            ArrayList list = new ArrayList()
+            {
+                "apple", "orage","graps","banana"
+            };
+            list.Sort();
+            foreach (var i in list)
+            {
+                Console.WriteLine(i + " ");
+            }
+        }
         static void Main(string[] args)
         {
-            //arrayBasic();
-            //objectInitializer();
-            //accessArrayElement();
+            arrayBasic();
+            objectInitializer();
+            accessArrayElement();
 
             //--------------------------Methods ---------------------------------
-            //InsertElement();
-            //removeElement();
-            //containsMethod();
+            InsertElement();
+            removeElement();
+            containsMethod();
             cloneArray();
+            sortElements();
 
         }
 
