@@ -114,6 +114,20 @@ namespace HashTable
                 Console.WriteLine(obj + " - " + students[obj]);
             }
         }
+
+        public static void clone()
+        {
+            Hashtable students = new Hashtable()
+            {
+                 {"Id", 1 },
+                {"Name", "Raj"},
+                {"Salary", 2000}
+            };
+
+            Hashtable copyStudents = (Hashtable)students.Clone();
+
+            Console.WriteLine(copyStudents.Count);
+        }
         static void Main(string[] args)
         {
             //HashTableBasic();
@@ -121,7 +135,8 @@ namespace HashTable
             //containsMethods();
             //RemoveElement();
             //accessingElement();
-            updateElement();
+            //updateElement();
+            clone();
         }
     }
 }
