@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Concurrent;
+using System.Security.Cryptography;
 
 namespace HashTable
 {
@@ -128,15 +129,52 @@ namespace HashTable
 
             Console.WriteLine(copyStudents.Count);
         }
+
+        public static void copyto()
+        {
+            Hashtable students = new Hashtable()
+            {
+                 {"Id", 1 },
+                 {"Name", "Raj"},
+                 {"Salary", 2000}
+            };
+
+            DictionaryEntry [] darr = new DictionaryEntry[students.Count];
+            students.CopyTo(darr, 0);
+
+            foreach(DictionaryEntry i in darr)
+            {
+                Console.WriteLine(i);
+            }
+
+            object[] objKey = new object[students.Count];
+            object[] objValue = new object[students.Count];
+
+            students.Keys.CopyTo(objKey, 0);
+            students.Values.CopyTo(objValue, 0);
+
+            Console.WriteLine("Keys array");
+            foreach(object obj in objKey)
+            {
+                Console.WriteLine(obj);
+            }
+
+            Console.WriteLine("Values array");
+            foreach(object obj in objValue){
+                Console.WriteLine(obj);
+            }
+        }
         static void Main(string[] args)
         {
-            //HashTableBasic();
-            //UserInput();
-            //containsMethods();
-            //RemoveElement();
-            //accessingElement();
-            //updateElement();
+            HashTableBasic();
+            UserInput();
+            containsMethods();
+            RemoveElement();
+            accessingElement();
+            updateElement();
             clone();
+
+            copyto();
         }
     }
 }
