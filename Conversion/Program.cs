@@ -85,20 +85,42 @@ namespace C_Sharp_CollectionsClass
             {
                 Console.WriteLine(s);
             }
+        }
 
+        public static void ListtoDict()
+        {
+            //Dictionary<int, string> dir = new Dictionary<int, string>()
+            //{
+            //    {1,"Raj" },
+            //    {2, "Lakshmi" },
+            //    {3,"Arasan" },
+            //    {4, "Mila" }
+            //};
 
+            List<List<int>> list = new List<List<int>>()
+            {
+                new List<int>{1,2,3},
+                new List<int>{5,6,7},
+            };
+
+            Dictionary<int, int> dic = list.ToDictionary(x => x[0], x => x[1]);
+
+            foreach(KeyValuePair <int, int> k in dic)
+            {
+                Console.WriteLine($"{k.Key} : {k.Value}");
+            }
         }
         static void Main(String[] args)
         {
-            //ArrayToList();
-            //ListToArray();
+            ArrayToList();
+            ListToArray();
 
-            //DicttoArray();
+            DicttoArray();
 
-            //ArrayTODict();
+            ArrayTODict();
 
             DictToList();
-
+            ListtoDict();
 
         }
     }
