@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata;
 using System.Threading.Channels;
 
 namespace C_Sharp_CollectionsClass
@@ -88,13 +89,27 @@ namespace C_Sharp_CollectionsClass
                 Console.WriteLine(i);
             }
         }
+
+        public static void trygetvalue()
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string>()
+            {
+                {1, "Raj" },
+                { 2,"Ravi" },
+                {3, "Gislen" }
+            };
+
+            Console.WriteLine(dic.TryGetValue(2, out string name));
+            Console.WriteLine();        }
         static void Main(string[] args)
         {
             //DictionaryDeclaeration();  
             //acessingElement();
             //containsMethods();
             //forAll();
-            updateing();
+            //updateing();
+
+            trygetvalue();
         }
     }
 }
