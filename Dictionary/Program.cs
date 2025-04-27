@@ -73,13 +73,28 @@ namespace C_Sharp_CollectionsClass
             
         }
 
+        public static void updateing()
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string>()
+            {
+                {1, "Raj" },
+                { 2,"Ravi" },
+                {3, "Gislen" }
+            };
 
+            dic[1] = "Sabari";
+            foreach(object i in dic)
+            {
+                Console.WriteLine(i);
+            }
+        }
         static void Main(string[] args)
         {
             //DictionaryDeclaeration();  
             //acessingElement();
             //containsMethods();
             //forAll();
+            updateing();
         }
     }
 }
