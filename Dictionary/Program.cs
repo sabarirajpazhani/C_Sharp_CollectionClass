@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Channels;
 
 namespace C_Sharp_CollectionsClass
 {
@@ -45,11 +46,40 @@ namespace C_Sharp_CollectionsClass
                 Console.WriteLine(key + " - "+ value);
             }
         }
+
+        public static void containsMethods()
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string>()
+            {
+                {1, "Raj" },
+                { 2,"Ravi" },
+                {3, "Gislen" }
+            };
+
+            Console.WriteLine(dic.ContainsKey(1));
+            Console.WriteLine(dic.ContainsValue("Raj"));
+        }
+
+        public static void forAll()
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string>()
+            {
+                {1, "Raj" },
+                { 2,"Ravi" },
+                {3, "Gislen" }
+            };
+
+            dic.AsParallel().ForAll(x => Console.WriteLine(x.Key+" : "+x.Value));
+            
+        }
+
+
         static void Main(string[] args)
         {
             //DictionaryDeclaeration();  
-            acessingElement();
-
+            //acessingElement();
+            //containsMethods();
+            //forAll();
         }
     }
 }
